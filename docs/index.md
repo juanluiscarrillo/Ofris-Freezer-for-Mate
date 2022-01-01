@@ -37,7 +37,7 @@ Cuando se congela un usuario se guarda la información relativa a él en ese mom
 ## Ficheros involucrados
 La primera vez que se congele un usuario se creará una carpeta con la ruta **/etc/.ofris**.
 
-Dentro de este directorio se creará:
+Dentro de este directorio, a su vez, se creará:
 - Una carpeta con el nombre de cada uno de los usuarios que se congela. Dentro de cada carpeta de usuario se almacena toda la información del *home* del usuario congelado. 
 - Un fichero ***"user"-dconf-full-backup***, donde *"user"* es el login del usuario, con toda la información de respaldo del Mate obtenida con el comando *dconf dump /*
 - Un fichero *ofris"user".sh* con el script que se ejecutará cuando se inicia la sesión
