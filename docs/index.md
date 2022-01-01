@@ -31,7 +31,7 @@ La utilidad de cada opción es:
 9. Termina el programa
 
 ## Funcionamiento del programa
-Cuando se congela un usuario se guarda la información relativa a él en ese momento. El usuario puede editar su *home*, pero cada vez que se inicia de nuevo la sesión, se carga la información guardada por ofris restableciendo el sistema al estado original en el que se guardó.
+Cuando se congela un usuario se guarda la información relativa a él en ese momento. El usuario puede editar su *home*, pero cada vez que se inicia de nuevo la sesión, se carga la información guardada por ofris, restableciendo el sistema al estado original en el que se guardó.
 
 
 ## Ficheros involucrados
