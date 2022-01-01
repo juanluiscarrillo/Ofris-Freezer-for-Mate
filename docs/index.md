@@ -1,4 +1,39 @@
-## Welcome to GitHub Pages
+# Congelador para Ubuntu 18.04 y 20.04 para Mate basado en Ofris
+
+Este software se puede utilizar como un congelador para Linux por línea de comando. Concretamente, se ha probado con Ubuntu 18.04 y 20.04, con entorno de escritorio MATE.
+
+Este *script-shell* para *bash* de Linux, se basa en el congelador [Ofris](https://sourceforge.net/projects/dafturnofris-id/) desarrollado por Muhammad Faruq Nuruddinsyah.
+
+El *script* original de Muhammad Faruq no funciona correctamente para las versiones 18.04 y superiores de Ubuntu, ya que estas gestionan la información del entorno de usuario de manera ligeramente distinta a lo que lo hacían las versiones predecesoras. Es por este motivo por el que se ha desarrollado esta nueva versión de congelador.
+
+** Utilización del congelador
+
+El *script* hay que ejecutarlo desde un usuario con permiso de administrador. Una vez descargado el *script*, hay que darle permiso de ejecución. Cuando se ejecuta en un *shell* o terminal la aplicación muestra las siguientes opciones de menú.
+1. Freeze for user <current_user>
+2. Freeze for other user
+3. Unfreeze for use <current_user>
+4. Unfreeze for other user
+5. View status for user <current_user>
+6. View status for other users
+7. Show system users
+8. Set password
+9. Exit
+
+La utilidad de cada opción es:
+1. Congela el usuario actual
+2. Congela otro usuario (el programa pedirá el login del usuario)
+3. Descongela el usuario actual
+4. Descongela otro usuario (el programa pedirá el login del usuario) 
+5. Indica el estado del usuario actual
+6. Indica el estado de otro usuario (el programa pedirá el login del usuario)
+7. Muestra todos los usuarios del equipo
+8. Pone una clave a la aplicación
+9. Termina el programa
+
+
+
+
+
 
 You can use the [editor on GitHub](https://github.com/juanluiscarrillo/Ofris-for-Mate/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
