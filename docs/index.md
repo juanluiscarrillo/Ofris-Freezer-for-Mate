@@ -46,4 +46,4 @@ Además, se creará un fichero con nombre ***ofris"user".desktop*** dentro de la
   
 Es importante tener en cuenta que cuando se descongela un usuario lo que realmente sucede es que se borra el fichero *ofris"user".desktop* de la carpeta */etc/xdg/autostart/*. El resto de los ficheros, permanecen dentro de la carpeta */etc/.ofris*, por lo que si se desea es posible reestablecer manualmente la sesión del usuario. Pero, muy importante, si se vuelve a congelar el usuario se sobreescriben estos ficheros. Por lo tanto, puede ser recomendable crear una copia de seguridad del contenido de la carpeta */etc/.ofris*.
   
-También, es importante tener en cuenta de que cuando se elimina un usuario todos los ficheros permanecen en el sistema. Si posteriormente se vuelve a crear un usuario con el mismo nombre y se inicia sesión se restaurará con el estado que se tiene almacenado.
+También, es importante tener en cuenta que cuando se elimina un usuario todos los ficheros permanecen en el sistema. Si posteriormente se vuelve a crear un usuario con el mismo nombre y se inicia sesión se restaurará con el estado que se tiene almacenado.
