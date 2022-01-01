@@ -6,7 +6,7 @@ Este *script-shell* para *bash* de Linux, se basa en el congelador [Ofris](https
 
 El *script* original de Muhammad Faruq no funciona correctamente para las versiones 18.04 y superiores de Ubuntu, ya que estas gestionan la información del entorno de usuario de manera ligeramente distinta a lo que lo hacían las versiones predecesoras. Es por este motivo por el que se ha desarrollado esta nueva versión de congelador.
 
-** Utilización del congelador
+## Utilización del congelador
 
 El *script* hay que ejecutarlo desde un usuario con permiso de administrador. Una vez descargado el *script*, hay que darle permiso de ejecución. Cuando se ejecuta en un *shell* o terminal la aplicación muestra las siguientes opciones de menú.
 1. Freeze for user <current_user>
@@ -30,43 +30,20 @@ La utilidad de cada opción es:
 8. Pone una clave a la aplicación
 9. Termina el programa
 
+## Funcionamiento del programa
+Cuando se congela un usuario se guarda la información relativa a él en ese momento. El usuario puede editar su *home*, pero cada vez que se inicia de nuevo la sesión, se carga la información guardada por ofris restableciendo el sistema al estado original en el que se guardó.
 
 
+## Ficheros involucrados
+La primera vez que se congele un usuario se creará una carpeta con la ruta **/etc/.ofris**.
 
+Dentro de este directorio se creará:
+- Una carpeta con el nombre de cada uno de los usuarios que se congela. Dentro de cada carpeta de usuario se almacena toda la información del *home* del usuario congelado. 
+- Un fichero *<user>-dconf-full-backup*, donde *<user>* es el login del usuario, con toda la información de respaldo del Mate obtenida con el comando *dconf dump /*
+- Un fichero *ofris<user>.sh* con el script que se ejecutará cuando se inicia la sesión
 
-
-You can use the [editor on GitHub](https://github.com/juanluiscarrillo/Ofris-for-Mate/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/juanluiscarrillo/Ofris-for-Mate/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Además, se creará un fichero con nombre ***ofris<user>.desktop*** dentro de la carpeta ***/etc/xdg/autostart/***. Este fichero tienen un enlace al fichero *ofris<user>.sh* de la carpeta */etc/.ofris*, que es el que restaura el sistema del usuario. Cuando un usuario inicia una sesión se ejecutan estos *scripts*.
+  
+Es importante tener en cuenta que cuando se descongela un usuario lo que realmente sucede es que se borra el fichero *ofris<user>.desktop* de la carpeta */etc/xdg/autostart/*. El resto de los ficheros, permanecen dentro de la carpeta */etc/.ofris*, por lo que si se desea es posible reestablecer manualmente la sesión del usuario. Pero, muy importante, si se vuelve a congelar el usuario se sobreescriben estos ficheros. Por lo tanto, puede ser recomendable crear una copia de seguridad del contenido de la carpeta */etc/.ofris*.
+  
+También, es importante tener en cuenta de que cuando se elimina un usuario todos los ficheros permanecen en el sistema. Si posteriormente se vuelve a crear un usuario con el mismo nombre y se inicia sesión se restaurará con el estado que se tiene almacenado.
