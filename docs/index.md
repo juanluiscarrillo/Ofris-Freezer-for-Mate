@@ -39,7 +39,7 @@ La primera vez que se congele un usuario se creará una carpeta con la ruta **/e
 
 Dentro de este directorio, a su vez, se creará:
 - Una carpeta con el nombre de cada uno de los usuarios que se congela. Dentro de cada carpeta de usuario se almacena toda la información del *home* del usuario congelado. 
-- Un fichero ***"user"-dconf-full-backup***, donde *"user"* es el login del usuario, con toda la información de respaldo del Mate obtenida con el comando *dconf dump /*
+- Un fichero ***"user"-dconf-full-backup***, donde *"user"* es el login del usuario, con toda la información de respaldo del entorno de escritorio Mate obtenida con el comando *dconf dump /*
 - Un fichero *ofris"user".sh* con el script que se ejecutará cuando se inicia la sesión
 
 Además, se creará un fichero con nombre ***ofris"user".desktop*** dentro de la carpeta ***/etc/xdg/autostart/***. Este fichero tienen un enlace al fichero *ofris"user".sh* de la carpeta */etc/.ofris*, que es el que restaura el sistema del usuario. Cuando un usuario inicia una sesión se ejecutan estos *scripts*.
