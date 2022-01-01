@@ -8,7 +8,7 @@ El *script* original de Muhammad Faruq no funciona correctamente para las versio
 
 ## Utilización del congelador
 
-El *script* hay que ejecutarlo desde un usuario con permiso de administrador. Una vez descargado el *script*, hay que darle permiso de ejecución. Cuando se ejecuta en un *shell* o terminal la aplicación muestra las siguientes opciones de menú.
+El *script* hay que ejecutarlo desde un usuario con permiso de administrador. Una vez descargado el *script*, hay que darle permiso de ejecución. Cuando se ejecuta en un *shell* o terminal, la aplicación muestra las siguientes opciones de menú.
 1. Freeze for user <current_user>
 2. Freeze for other user
 3. Unfreeze for use <current_user>
